@@ -3,6 +3,21 @@
 
 // commnet out lines
 
+const globalObject = {
+  key: "value",
+  age: "35",
+  nestedObject: {
+    data: "Vijay",
+  },
+  arr: [2, 3, 5, 6, 8],
+};
+
+console.log(globalObject.nestedObject.data);
+
+var aaa = { name: "sanjay" };
+console.log(window.document);
+console.log(window.aaa.name);
+console.log(aaa.name);
 console.log("first line of code");
 
 //console.log("second line of code");
@@ -12,6 +27,9 @@ console.log("third line of code");
 ////////creation of variable
 //syntax -> variablekeyword variableName = value
 var a = 20;
+var studName = "Prakash";
+
+console.log(window.a);
 console.log(a);
 
 // declaring a varible
@@ -38,6 +56,7 @@ console.log(abc);
 //camleCasing
 //elephant casing  ALL caps
 const studentName = "Eshwar";
+
 //studentName = "Sanjay"; // we cannot re assign
 //const studentName = "Vijay"; // we cannot redeclare
 console.log(studentName);
@@ -84,6 +103,7 @@ const sampleObj = {
   age: 25,
 };
 console.log(sampleObj);
+console.log("window function --------", window.age);
 // accesing object
 console.log(sampleObj.age, sampleObj.education);
 
@@ -167,7 +187,9 @@ let average = 35;
 let good = 60;
 let excellence = 90;
 let yourMark = 68;
-
+// 28 >= 90
+// 28 >= 60
+// 28 >= 38
 if (yourMark >= excellence) {
   console.log("You are excellent");
 } else if (yourMark >= good) {
@@ -177,6 +199,7 @@ if (yourMark >= excellence) {
 } else {
   console.log("You have failed");
 }
+console.log("sanjay");
 
 // switch case ( results)
 const day = 6;
@@ -207,9 +230,10 @@ switch (day) {
 }
 
 // function with return keyword
-// function functionName (){
+// function functionName (..arugments){
 // logic of a function
 //}
+// functionName(paraments)
 
 function add(num1, num2) {
   console.log(num1 + num2);
@@ -239,3 +263,30 @@ function calulator(type, num1, num2) {
 
 const result = calulator("mul", 40, 5);
 console.log(result);
+
+// const userInput = [1, 2]
+
+function findtheMultiple(number, multiple) {
+  // trying loop through the muliples
+
+  for (let i = 1; i <= multiple; i++) {
+    console.log(number * i);
+  }
+}
+
+findtheMultiple(5, 3);
+
+let className1 = "B51wd2";
+let className2 = className1;
+className2 = "B52wd2";
+console.log("class1", className1);
+console.log("class2", className2);
+
+let obj1 = {
+  name: "object1",
+};
+
+let obj2 = obj1;
+obj2.name = "object2";
+console.log("obj1", obj1);
+console.log("obj2", obj2);
