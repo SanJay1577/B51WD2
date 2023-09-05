@@ -101,12 +101,75 @@ console.log(rest);
 
 0 - 10, 0 - 10, 0 - 10;
 
-// function rotatingArray(arr, k){
-//   //left part
-//    left (0 index , 2 index) 1, 2
-//    right remaining  3, 4
-//    right +lef  =
+// Destructuring
 
-// }
-// ([1, 2,  3, 4], 2)
-//  //  4, 1, 2, 3
+//we can destructure Obj and array
+
+// Array Destructuring
+
+const studentArray = ["Abdulla", "Arun", "Balaji", "meenatchi"];
+console.log("Before destructuring .............................");
+// before destructuring
+console.log(studentArray[0]);
+console.log(studentArray[1]);
+console.log(studentArray[2]);
+console.log(studentArray[3]);
+console.log("After destructuring .............................");
+const [stud1, stud2, stud3, stud4] = studentArray;
+// after destructuring
+console.log(stud1);
+console.log(stud2);
+console.log(stud3);
+console.log(stud4);
+
+// skipping values
+console.log("skipping valuesss-------------------");
+const [studVal1, , studVal2] = studentArray;
+console.log(studVal1);
+console.log(studVal2);
+
+// rest operator in destructuring
+const weeks = [1, 2, 3, 4];
+const [firstweek, secondweek, ...restweeks] = weeks;
+console.log(firstweek);
+console.log(secondweek);
+console.log(restweeks);
+// nested destructuring
+const [restparam1, restparam2] = restweeks;
+console.log(restparam1);
+// task -5min
+const testArray = [1, 2, 5, 7, ["sanjay", 25], 6];
+//nested destructuring
+const [, , , , [mentorname, mentorage]] = testArray;
+//console.log(value);
+console.log(mentorname);
+console.log(mentorage);
+
+// Object destructing
+const personObj = {
+  firstName: "sanjay",
+  lastName: "guvi",
+  pos: "mentor",
+  location1: "chennai",
+  address: {
+    state: "Tamil Nadu",
+    country: "India",
+  },
+};
+console.log("Before object destucturing ------------");
+console.log(personObj.firstName);
+console.log(personObj.lastName);
+console.log(personObj.pos);
+console.log("After object destucturing ------------");
+const { firstName, pos, lastName } = personObj;
+console.log(firstName);
+console.log(pos);
+console.log("Renaming the objcet........");
+const { location1: city } = personObj;
+console.log(city);
+// Nested Object
+const {
+  address: { state, country },
+} = personObj;
+console.log(state);
+console.log(country);

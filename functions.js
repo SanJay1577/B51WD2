@@ -272,3 +272,5 @@ function TopLayerFunc(value1) {
 const returnStore = TopLayerFunc(10); // function
 const result = returnStore(10);
 console.log(result);
+
+// if(number % 2 != 0) => prime number
